@@ -36,23 +36,52 @@ main{
     color: #7127BA;
 }
 .profile-image{
-    background-image: url('images/Gradient.png');
+    position: relative;
+    display: inline-block;
+}
+.profile-image img{
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+.profile-image::before{
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(circle at 50% 50%, #7127BA 0%, #11071F 80%);
+    /* background: radial-gradient(circle at center, #7127BA 0%, #11071F 60%, transparent 100%); */
+    z-index: 0;
+}
+
+.profil-item{
+    display: flex;
+    position: relative;
+}
+.profil-item img{
+    
+}
+.design-profil{
+    text-decoration: underline;
+    font-size: 12px;
 }
 .h-profil{
     font-size: 10px;;
 }
 .large-text-profil{
-    font-size: 1.7em; /* Adjust as needed */
+    font-size: 30px; /* Adjust as needed */
     margin: 0; /* Remove default margin */
     color: #FFF; /* White text color for better contrast */
 }
 .highlight{
     display: inline-block;
     background-image: url('images/Ellipse.png');
-    background-size: cover; /* Ensures the background image covers the element */
+    background-size: 112% auto; /* Ensures the background image covers the element */
     background-repeat: no-repeat; /* Prevents the background image from repeating */
     background-position: center; /* Centers the background image */
-    padding: 0 38px;
+    /* padding: 0 1px; */
     color: #7127BA;
 }
 .small-text-profil{
@@ -134,7 +163,7 @@ main{
   width: 90%; /* Prend 90% de la largeur du parent */
   max-width: 450px; /* Largeur maximale de la carte */
   height: 130px;
-  background: linear-gradient(to right, #4a005c, #2a003f); /* Dégradé de fond */
+  background: linear-gradient(to right, #2C1250, #2a003f); /* Dégradé de fond */
   border-radius: 20px; /* Bords arrondis */
   padding: 20px; /* Espacement intérieur */
   box-sizing: border-box; /* S'assurer que le padding ne s'ajoute pas à la largeur */
@@ -159,12 +188,12 @@ main{
 }
 
 .learn-more-button {
-  background-color: #6a2c91; /* Couleur de fond du bouton */
+  background-color: #693B93; /* Couleur de fond du bouton */
   color: #ffffff; /* Couleur du texte du bouton */
   border: none; /* Pas de bordure */
   border-radius: 5px; /* Bords légèrement arrondis */
   padding: 8px 10px; /* Espacement intérieur du bouton */
-  font-size: 12px; /* Taille de police du bouton */
+  font-size: 8px; /* Taille de police du bouton */
   font-weight: bold;
   cursor: pointer; /* Curseur de la souris en pointeur */
   transition: background-color 0.3s ease; /* Transition douce au survol */
