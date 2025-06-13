@@ -1,0 +1,301 @@
+/* Basic Reset & Body Styling (Optional, but good practice) */
+body {
+  margin: 0;
+  font-family: "Preahvihear", sans-serif;
+  background-color: #11071F;
+  color: #FFF; /* White text color for better contrast */
+}
+
+/* Header Styling */
+header {
+  background-color: #1A0B2E; /* Light gray background */
+  padding: 10px 20px; /* Some padding around the content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.header-container {
+  max-width: 1000px; /* Set your desired maximum width */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 0 20px; /* Add some padding to the sides within the container */
+  display: flex; /* Enable Flexbox for its children (logo and menu) */
+  justify-content: space-between; /* Pushes children to opposite ends */
+  align-items: center; /* Vertically centers items */
+}
+
+/* Profil Styling */
+.profil-container{
+    display: flex; /* Enable Flexbox for the profile section */
+    align-items: center; /* Vertically centers items */
+    max-width: 500px;
+}
+.h-profil{
+    font-size: 10px;;
+}
+.large-text-profil{
+    font-size: 1.7em; /* Adjust as needed */
+    margin: 0; /* Remove default margin */
+    color: #FFF; /* White text color for better contrast */
+}
+.highlight{
+    display: inline-block;
+    background-image: url('/images/Ellipse.png');
+    background-size: cover; /* Ensures the background image covers the element */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-position: center; /* Centers the background image */
+    padding: 0 38px;
+    color: #7127BA;
+}
+.small-text-profil{
+    font-size: 0.4em; /* Smaller text size */
+}
+
+.presentation-detail{
+    margin: 50px 0;
+    line-height: 20px;
+}
+
+.main-container {
+  max-width: 1000px; /* Set your desired maximum width */
+  margin: 0 auto;
+  padding: 20px; /* Add some padding around the content */
+}
+
+/* Logo Styling */
+.logo img {
+  max-height: 50px; /* Adjust as needed */
+  width: auto; /* Maintain aspect ratio */
+  display: block; /* Removes extra space below image */
+}
+
+/* Navigation Menu Styling */
+.main-menu ul {
+  list-style: none; /* Remove bullet points from list */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Enable Flexbox for the menu items */
+}
+
+.main-menu li {
+  margin-left: 20px; /* Space between menu items */
+}
+
+.main-menu a {
+  text-decoration: none; /* Remove underline from links */
+  color: #FFF; /* Dark gray text color */
+  font-weight: bold;
+  padding: 5px 0; /* Add some padding for better click area */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.main-menu a:hover {
+  color: #007bff; /* Blue color on hover */
+}
+/* Experience Styling */
+.experience-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between the columns */
+    /* background: radial-gradient(circle at center, #7127BA 0%, #11071F 40%); */
+    margin-bottom: 60px;
+    overflow: visible;
+}
+
+.experience-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 120%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle at center, #7127BA 0%, #11071F 60%, transparent 100%);
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(8px); /* Optionnel pour un effet plus doux */
+}
+
+.card-content{
+    display: flex;
+    gap: 70px; /* Espace entre l'image et le texte */
+    align-items: center; /* Centre les éléments verticalement */
+}
+.card-container {
+  width: 90%; /* Prend 90% de la largeur du parent */
+  max-width: 450px; /* Largeur maximale de la carte */
+  height: 130px;
+  background: linear-gradient(to right, #4a005c, #2a003f); /* Dégradé de fond */
+  border-radius: 20px; /* Bords arrondis */
+  padding: 20px; /* Espacement intérieur */
+  box-sizing: border-box; /* S'assurer que le padding ne s'ajoute pas à la largeur */
+  display: flex; /* Utilisation de Flexbox pour le contenu principal de la carte */
+  align-items: center; /* Centre les éléments verticalement */
+  gap: 50px; /* Espace entre l'image et le texte */
+  overflow: hidden; /* Important pour que l'image ne dépasse pas les bords arrondis */
+  position: relative; /* Pour positionner les éléments décoratifs si besoin */
+  border-top: 5px solid #6a2c91; /* Bord supérieur coloré */
+}
+.card-image{
+    width: 50px;
+    height: 50px;
+}
+.card-text-section h2{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.card-text-section p{
+    font-size: 12px;
+    margin: 0; /* Supprimer la marge par défaut */
+}
+
+.learn-more-button {
+  background-color: #6a2c91; /* Couleur de fond du bouton */
+  color: #ffffff; /* Couleur du texte du bouton */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Bords légèrement arrondis */
+  padding: 8px 10px; /* Espacement intérieur du bouton */
+  font-size: 12px; /* Taille de police du bouton */
+  font-weight: bold;
+  cursor: pointer; /* Curseur de la souris en pointeur */
+  transition: background-color 0.3s ease; /* Transition douce au survol */
+  text-transform: uppercase; /* Texte en majuscules */
+  letter-spacing: 1px; /* Espacement des lettres */
+}
+
+/* skills Styling */
+.skills {
+    display: flex;
+    justify-content: center;
+}
+
+/* presentation Styling */
+.presentation-title{
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+.presentation-detail{
+    font-size: 0.8em;
+    width: 60%;
+}
+.presentation-subtitle{
+    font-size: 0.8em;
+}
+
+/* Project Styling */
+
+/* Ajoute ou adapte dans style.css */
+.project-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 32px;
+    margin-bottom: 100px;
+}
+
+.card-left {
+    position: relative;
+    /* min-width: 320px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.card-left-text{
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px;
+    bottom: 50px;
+}
+
+.p-card {
+    color: #9857D3;
+    margin-bottom: 0;
+    z-index: 2;
+    position: relative;
+}
+
+.h-card {
+    font-weight: bold;
+    margin-top: 0;
+    z-index: 2;
+    position: relative;
+}
+
+.card-gradient {
+    position: absolute;
+    top: 48px; /* Ajuste selon la hauteur de tes titres */
+    left: 0;
+    width: 380px; /* Taille fixe */
+    height: 120px;
+    background: linear-gradient(135deg, #2a003f 60%, #8c42b8 100%);
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(112, 39, 186, 0.15);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    /* Chevauche sur la droite */
+    transform: translateX(40px);
+}
+
+.card-text {
+    color: #fff;
+    font-size: 1em;
+    margin: 0;
+}
+
+.card-right {
+    /* z-index: 2; */
+    min-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-right img {
+    /* width: 320px; */
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.card-text {
+  color: #ffffff;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* Footer Styling */
+
+.info-footer{
+    max-width: 500px;
+    margin-bottom: 10px;
+}
+
+.info-footer p{
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.email-footer{
+    color: #FFF !important;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.social-links{
+    display: flex;
+    gap: 30px; /* Space between icons */
+}
+
+.social-links a {
+    color: #FFF;
+    text-decoration: none; 
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+
