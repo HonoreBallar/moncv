@@ -12,6 +12,9 @@ header {
   padding: 10px 20px; /* Some padding around the content */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
+main{
+    margin-top: 50px;
+}
 
 .header-container {
   max-width: 1000px; /* Set your desired maximum width */
@@ -26,7 +29,14 @@ header {
 .profil-container{
     display: flex; /* Enable Flexbox for the profile section */
     align-items: center; /* Vertically centers items */
-    max-width: 500px;
+    max-width: 550px;
+    gap: 20px; /* Space between profile image and text */
+}
+.profil-name{
+    color: #7127BA;
+}
+.profile-image{
+    background-image: url('images/Gradient.png');
 }
 .h-profil{
     font-size: 10px;;
