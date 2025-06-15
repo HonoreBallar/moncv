@@ -100,7 +100,7 @@ main{
 }
 
 /* Logo Styling */
-.logo img {
+.img-logo {
   max-height: 50px; /* Adjust as needed */
   width: auto; /* Maintain aspect ratio */
   display: block; /* Removes extra space below image */
