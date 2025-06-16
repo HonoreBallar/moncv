@@ -4,6 +4,8 @@ body {
   font-family: "Preahvihear", sans-serif;
   background-color: #11071F;
   color: #FFF; /* White text color for better contrast */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Header Styling */
@@ -14,6 +16,8 @@ header {
 }
 main{
     margin-top: 50px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .header-container {
@@ -109,7 +113,7 @@ main{
     background-position: center; /* Centers the background image */
     /* padding: 0 1px; */
     color: #7127BA;
-    min-width: 120px;
+    min-width: 105px;
 }
 .small-text-profil{
     font-size: 0.4em; /* Smaller text size */
@@ -124,6 +128,8 @@ main{
   max-width: 1000px; /* Set your desired maximum width */
   margin: 0 auto;
   padding: 20px; /* Add some padding around the content */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Logo Styling */
@@ -237,6 +243,12 @@ main{
     display: flex;
     justify-content: center;
     margin-bottom: 90px;
+}
+
+.skills img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
 }
 
 /* presentation Styling */
@@ -429,6 +441,22 @@ main{
 
   /* RESPONSIVE */
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .header-container {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #1A0B2E;
+        z-index: 1000;
+        padding: 15px 20px;
+        box-sizing: border-box;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -436,17 +464,22 @@ main{
     .main-menu ul {
         position: fixed;
         top: 0;
-        right: -100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
         flex-direction: column;
         background: #1A0B2E;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         padding: 80px 2rem 2rem 2rem;
         transition: all 0.4s ease;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
+        z-index: 999;
         opacity: 0;
         visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .main-menu li {
@@ -459,10 +492,10 @@ main{
         display: block;
         padding: 15px 0;
         font-size: 1.2em;
+        text-align: center;
     }
 
     #toggle:checked ~ ul {
-        right: 0;
         opacity: 1;
         visibility: visible;
     }
@@ -489,16 +522,54 @@ main{
     }
 
     /* Ajustements pour le contenu principal */
+    main {
+        margin-top: 70px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     .main-container {
         padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
     }
 
     .profil-container {
         flex-direction: column;
         text-align: center;
+        align-items: center;
+    }
+
+    .profile-text {
+        text-align: center;
+        width: 100%;
+    }
+
+    .profil-item {
+        justify-content: center;
+    }
+
+    .presentation {
+        text-align: center;
+    }
+
+    .presentation-detail {
+        text-align: center;
+        width: 100%;
     }
 
     .experience-container {
         grid-template-columns: 1fr;
+    }
+
+    .skills {
+        margin-bottom: 50px;
+    }
+
+    .skills img {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
     }
 }
