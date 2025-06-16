@@ -333,35 +333,40 @@ main{
 
 .card-gradient {
     position: absolute;
-    top: 48px; /* Ajuste selon la hauteur de tes titres */
+    top: 48px;
     left: -50px;
-    width: 580px; /* Taille fixe */
+    width: 580px;
     height: 120px;
-    background: linear-gradient(135deg, #2a003f 60%, #8c42b8 100%);
+    background: rgba(112, 39, 186, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-radius: 20px;
     box-shadow: 0 4px 24px rgba(112, 39, 186, 0.15);
     z-index: 1;
     display: flex;
     align-items: center;
     padding: 10px;
-    /* Chevauche sur la droite */
     transform: translateX(40px);
+    border: 1px solid rgba(112, 39, 186, 0.2);
 }
-.card-gradient-reverse{
+
+.card-gradient-reverse {
     position: absolute;
-    top: 48px; /* Ajuste selon la hauteur de tes titres */
+    top: 48px;
     right: -50px;
-    width: 480px; /* Taille fixe */
+    width: 480px;
     height: 120px;
-    background: linear-gradient(135deg, #2a003f 60%, #8c42b8 100%);
+    background: rgba(112, 39, 186, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-radius: 20px;
     box-shadow: 0 4px 24px rgba(112, 39, 186, 0.15);
     z-index: 1;
     display: flex;
     align-items: center;
     padding: 10px;
-    /* Chevauche sur la droite */
     transform: translateX(-40px);
+    border: 1px solid rgba(112, 39, 186, 0.2);
 }
 
 .card-text {
