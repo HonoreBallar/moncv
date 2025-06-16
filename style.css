@@ -265,8 +265,6 @@ main{
 }
 
 /* Project Styling */
-
-/* Ajoute ou adapte dans style.css */
 .project-item {
     display: flex;
     align-items: center;
@@ -471,7 +469,7 @@ main{
         background: #1A0B2E;
         width: 100vw;
         height: 100vh;
-        padding: 80px 2rem 2rem 2rem;
+        padding: 0;
         transition: all 0.4s ease;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
         z-index: 999;
@@ -483,7 +481,7 @@ main{
     }
 
     .main-menu li {
-        margin: 20px 0;
+        margin: 15px 0;
         width: 100%;
         text-align: center;
     }
@@ -571,5 +569,41 @@ main{
         width: 90%;
         max-width: 400px;
         height: auto;
+    }
+
+    .project-item {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    .card-left, .card-right, .card-left-reverse, .card-right-reverse {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .card-right img, .card-right-reverse img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .card-gradient, .card-gradient-reverse {
+        position: relative;
+        width: 100%;
+        left: 0;
+        right: 0;
+        transform: none;
+        margin-top: 20px;
+    }
+
+    .card-left-text, .card-left-text-reverse {
+        position: relative;
+        bottom: 0;
+        margin-bottom: 20px;
+    }
+
+    .card-link-reverse {
+        text-align: left;
     }
 }
