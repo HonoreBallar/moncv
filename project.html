@@ -19,6 +19,14 @@
                 </a>
             </div>
             <nav class="main-menu">
+                <input type="checkbox" id="toggle" />
+                
+                <label for="toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
@@ -30,6 +38,50 @@
     </header>
     <main>
         <div class="main-container">
+
+            <section class="projects">
+                <div class="project-item">
+                    <div class="card-left">
+                        <div class="card-left-text">
+                            <p class="p-card">Featured project</p>
+                            <h3 class="h-card">Example project</h3>
+                        </div>
+                        <div class="card-gradient">
+                            <p class="card-text">
+                                A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. 
+                                Create and save new playlists of recommended tracks based on your existing playlists and more.
+                            </p>
+                        </div>
+                        <p>
+                            <a class="card-link" href="https://example.com" target="_blank">View project</a>
+                        </p>
+                    </div>
+                    <div class="card-right">
+                        <img src="images/Project1.png" alt="Project 1 image">
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="card-right-reverse">
+                        <img src="images/Project1.png" alt="Project 2 image">
+                    </div>
+                    <div class="card-left-reverse">
+                        <div class="card-left-text card-left-text-reverse">
+                            <p class="p-card">Featured project</p>
+                            <h3 class="h-card">Example project 2</h3>
+                        </div>
+                        <div class="card-gradient-reverse">
+                            <p class="card-text">
+                                A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. 
+                                Create and save new playlists of recommended tracks based on your existing playlists and more.
+                            </p>
+                        </div>
+                        <p class="card-link-reverse">
+                            <a class="card-link" href="https://example.com" target="_blank">View project</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
 
             <footer>
                 <h2 class="h-footer">Contact</h2>

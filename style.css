@@ -25,6 +25,32 @@ main{
   align-items: center; /* Vertically centers items */
 }
 
+
+/* Hamburger (3 barres) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Toggle caché */
+#toggle {
+    display: none;
+  }
+  
+
+
 /* Profil Styling */
 .profil-container{
     display: flex; /* Enable Flexbox for the profile section */
@@ -78,11 +104,12 @@ main{
 .highlight{
     display: inline-block;
     background-image: url('images/Ellipse.png');
-    background-size: 112% auto; /* Ensures the background image covers the element */
+    background-size: 100% auto; /* Ensures the background image covers the element */
     background-repeat: no-repeat; /* Prevents the background image from repeating */
     background-position: center; /* Centers the background image */
     /* padding: 0 1px; */
     color: #7127BA;
+    min-width: 120px;
 }
 .small-text-profil{
     font-size: 0.4em; /* Smaller text size */
@@ -107,34 +134,39 @@ main{
 }
 
 /* Navigation Menu Styling */
+.main-menu {
+    position: relative;
+}
+
 .main-menu ul {
-  list-style: none; /* Remove bullet points from list */
-  margin: 0;
-  padding: 0;
-  display: flex; /* Enable Flexbox for the menu items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 .main-menu li {
-  margin-left: 70px; /* Space between menu items */
+    margin-left: 70px;
 }
 
 .main-menu a {
-  text-decoration: none; /* Remove underline from links */
-  color: #FFF; /* Dark gray text color */
-  font-weight: bold;
-  padding: 5px 0; /* Add some padding for better click area */
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
 }
 
 .main-menu a:hover {
-  color: #007bff; /* Blue color on hover */
+    color: #007bff;
 }
+
 /* Experience Styling */
 .experience-container{
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 20px; /* Space between the columns */
+    gap: 10px; /* Space between the columns */
     /* background: radial-gradient(circle at center, #7127BA 0%, #11071F 40%); */
     margin-bottom: 60px;
     overflow: visible;
@@ -160,8 +192,7 @@ main{
     align-items: center; /* Centre les éléments verticalement */
 }
 .card-container {
-  width: 90%; /* Prend 90% de la largeur du parent */
-  max-width: 450px; /* Largeur maximale de la carte */
+  width: 100%; /* Prend 90% de la largeur du parent */
   height: 130px;
   background: linear-gradient(to right, #2C1250, #2a003f); /* Dégradé de fond */
   border-radius: 20px; /* Bords arrondis */
@@ -205,6 +236,7 @@ main{
 .skills {
     display: flex;
     justify-content: center;
+    margin-bottom: 90px;
 }
 
 /* presentation Styling */
@@ -233,6 +265,15 @@ main{
 
 .card-left {
     position: relative;
+    width: 50%;
+    /* min-width: 320px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.card-left-reverse{
+    position: relative;
+    width: 50%;
     /* min-width: 320px; */
     display: flex;
     flex-direction: column;
@@ -243,6 +284,9 @@ main{
     z-index: 2;
     margin-bottom: 50px;
     bottom: 50px;
+}
+.card-left-text-reverse{
+    text-align: right;
 }
 
 .p-card {
@@ -258,12 +302,30 @@ main{
     z-index: 2;
     position: relative;
 }
+.card-link{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.8em;
+    position: relative;
+    z-index: 2;
+
+    background-color: #8c42b8;
+    padding: 4px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    top: 40px;
+}
+
+.card-link-reverse{
+    text-align: right;
+}
 
 .card-gradient {
     position: absolute;
     top: 48px; /* Ajuste selon la hauteur de tes titres */
-    left: 0;
-    width: 380px; /* Taille fixe */
+    left: -50px;
+    width: 580px; /* Taille fixe */
     height: 120px;
     background: linear-gradient(135deg, #2a003f 60%, #8c42b8 100%);
     border-radius: 20px;
@@ -271,9 +333,25 @@ main{
     z-index: 1;
     display: flex;
     align-items: center;
-    padding: 24px;
+    padding: 10px;
     /* Chevauche sur la droite */
     transform: translateX(40px);
+}
+.card-gradient-reverse{
+    position: absolute;
+    top: 48px; /* Ajuste selon la hauteur de tes titres */
+    right: -50px;
+    width: 480px; /* Taille fixe */
+    height: 120px;
+    background: linear-gradient(135deg, #2a003f 60%, #8c42b8 100%);
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(112, 39, 186, 0.15);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* Chevauche sur la droite */
+    transform: translateX(-40px);
 }
 
 .card-text {
@@ -283,7 +361,15 @@ main{
 }
 
 .card-right {
-    /* z-index: 2; */
+    width: 50%;
+    min-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-right-reverse {
+    width: 50%;
     min-width: 320px;
     display: flex;
     align-items: center;
@@ -291,9 +377,13 @@ main{
 }
 
 .card-right img {
-    /* width: 320px; */
     border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    box-shadow: -10px -10px 20px 0 rgba(112, 39, 186, 0.15);
+}
+
+.card-right-reverse img {
+    border-radius: 16px;
+    box-shadow: -10px -10px 20px 0 rgba(112, 39, 186, 0.15);
 }
 
 .card-text {
@@ -337,4 +427,65 @@ main{
     color: #007bff; /* Change color on hover */
 }
 
+  /* RESPONSIVE */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
 
+    .main-menu ul {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: #1A0B2E;
+        width: 250px;
+        height: calc(100vh - 70px);
+        padding: 2rem;
+        transition: all 0.4s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .main-menu li {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .main-menu a {
+        display: block;
+        padding: 10px 0;
+        font-size: 1.1em;
+    }
+
+    #toggle:checked ~ ul {
+        right: 0;
+    }
+
+    /* Animation hamburger en croix */
+    #toggle:checked + .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #toggle:checked + .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Ajustements pour le contenu principal */
+    .main-container {
+        padding: 20px;
+    }
+
+    .profil-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .experience-container {
+        grid-template-columns: 1fr;
+    }
+}
