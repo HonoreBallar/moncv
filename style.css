@@ -654,7 +654,6 @@ main{
     display: flex;
     align-items: center;
     gap: 40px;
-    margin: 50px 0;
 }
 
 .about-me-image {
